@@ -3,14 +3,16 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="curs5.XPathExamples">
+      <class name="tests.TestSendMessages">
         <methods>
-          <include name="xpathLoginExample"/>
           <include name="tearDown"/>
-          <include name="testAccountDetails"/>
+          <include name="sendMessageReturnsSuccess"/>
+          <include name="sendMessageWithoutEmailReturnsFalse"/>
+          <include name="sendMessageWithoutNameReturnsFalse"/>
           <include name="setUp"/>
+          <include name="recordFailure"/>
         </methods>
-      </class> <!-- curs5.XPathExamples -->
+      </class> <!-- tests.TestSendMessages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

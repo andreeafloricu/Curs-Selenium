@@ -22,7 +22,7 @@ public class BaseTest {
 //	@Parameters({"url"})
 	@BeforeClass
 	public void setUp() {		
-		//System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
 		driver =  new ChromeDriver();	
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10000, TimeUnit.MILLISECONDS);

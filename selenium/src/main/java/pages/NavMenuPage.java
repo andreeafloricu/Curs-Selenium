@@ -13,6 +13,7 @@ public class NavMenuPage  {
 	
 	public By loginLink = By.linkText("Login");
 	public By shopLink = By.linkText("BOOKS");
+	public By contactLink = By.linkText("CONTACTS");
 	
 	public void navigateToLogin() {
 		//WebWait
@@ -28,5 +29,10 @@ public class NavMenuPage  {
 	public ShopPage navToShop() {
 		driver.findElement(shopLink).click();
 		return new ShopPage(driver);
+	}
+	
+	public ContactPage navToContact() {
+		driver.findElement(contactLink);
+		return new ContactPage(driver);
 	}
 }
