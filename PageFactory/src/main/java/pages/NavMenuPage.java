@@ -5,17 +5,23 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NavMenuPage {
+import utils.SeleniumWrappers;
+
+public class NavMenuPage extends SeleniumWrappers {
 
 	public WebDriver driver;
 	
 	public NavMenuPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
 	@FindBy(css = "a[class*='popup_login_link']") public WebElement loginLink;
 	@FindBy(linkText = "BOOKS") public WebElement shopLink;
+	@FindBy(linkText = "BLOG") public WebElement blogLink;
+	@FindBy(linkText = "Post Formats") public WebElement postFormatsLink;
+	@FindBy(linkText = "CONTACTS") public WebElement contactLink;
+	@FindBy(linkText = "EVENTS") public WebElement eventsPage;
 
 	public void navigateTo(WebElement element) {
 		element.click();

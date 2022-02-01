@@ -5,7 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class ShopPage {
+import utils.SeleniumWrappers;
+
+public class ShopPage extends SeleniumWrappers {
 
 	public WebDriver driver;
 
@@ -16,9 +18,14 @@ public class ShopPage {
 	@FindBy(css= "ul.products>li:first-child span.amount bdi") public WebElement firstBookPrice;
 	@FindBy(css= "ul.products>li:last-child span.amount bdi") public WebElement lastBookPrice;
 	
+	@FindBy(css="span[style='left: 0%;']") public WebElement sliderInitialPosition;
+	@FindBy(css="span[style='left: 100%;']") public WebElement sliderFinalPosition;
+	@FindBy(css="a[class*='add_to_cart_button']") public WebElement addToCart;
+	
 	public ShopPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
+	
 	}
 	
 	public void sortBooksLowToHigh() {

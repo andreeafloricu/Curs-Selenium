@@ -9,13 +9,27 @@ import utils.BaseTest;
 
 public class LoginTest extends BaseTest {
 	
-	NavMenuPage navMenu;
-	LoginPage loginPage;
+	NavMenuPage navMenu = new NavMenuPage(driver);;
+	LoginPage loginPage = new LoginPage(driver);;
 	
-	@Test
+	@Test(priority = 1)
 	public void loginTest() {
-		navMenu = new NavMenuPage(driver);
-		loginPage = new LoginPage(driver);
+		
+		//navMenu = new NavMenuPage(driver);
+		//loginPage = new LoginPage(driver);
+		
+		navMenu.navigateTo(navMenu.loginLink);
+		loginPage.loginInApp();
+		
+		assertTrue(loginPage.logoutButton.isDisplayed());
+		loginPage.logoutFromApp();
+	}
+	
+	@Test(priority = 2)
+	public void invalidLoginTest() {
+		
+		//navMenu = new NavMenuPage(driver);
+		//loginPage = new LoginPage(driver);
 		
 		navMenu.navigateTo(navMenu.loginLink);
 		loginPage.loginInApp();

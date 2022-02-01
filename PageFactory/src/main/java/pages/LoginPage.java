@@ -6,8 +6,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import utils.ReadPropertiesFile;
+import utils.SeleniumWrappers;
 
-public class LoginPage {
+public class LoginPage extends SeleniumWrappers {
 
 	public WebDriver driver;
 	public String username = ReadPropertiesFile.credentials.getProperty("user");
@@ -19,13 +20,20 @@ public class LoginPage {
 	@FindBy(css = "li[class='menu_user_logout']") public WebElement logoutButton;
 
 	public LoginPage(WebDriver driver) {
-		this.driver = driver;
+		super(driver);
 		PageFactory.initElements(driver, this);
 	}
 	
 	public void loginInApp() {
-		usernameField.sendKeys(username);
-		passwordFiled.sendKeys(password);
-		submitButton.click();
+		//usernameField.sendKeys(username); //varianta selenium
+		sendKeys(usernameField, username); //varianta selenium wrappers
+		sendKeys(passwordFiled, password);
+		//submitButton.click();
+		click(submitButton);
+	}
+	
+	public void logoutFromApp() {
+		//logoutButton.click();
+		click(logoutButton);
 	}
 }
