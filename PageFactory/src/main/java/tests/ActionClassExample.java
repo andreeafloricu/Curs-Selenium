@@ -66,7 +66,7 @@ public class ActionClassExample extends BaseTest {
 			
 		}
 		
-		//@Test
+		@Test
 		public void testDragAndDrop() throws InterruptedException {
 			page.navMenu.navigateTo(page.navMenu.shopLink);
 			
@@ -78,7 +78,7 @@ public class ActionClassExample extends BaseTest {
 
 		}
 		
-		@Test
+		//@Test
 		public void doubleClickExample() throws InterruptedException {
 			page.navMenu.navigateTo(page.navMenu.shopLink);
 			page.shopPage.doubleClick(page.shopPage.addToCart);	

@@ -1,0 +1,4 @@
+10:27:26.634 [main] INFO  utils.Log - calling method <click> on element <input type="submit" class="submit_button" value="Login">
+10:27:30.934 [main] INFO  utils.Log - calling method <click> on element <li class="menu_user_logout"><a href="https://keybooks.ro/wp-login.php?action=logout&amp;redirect_to=https%3A%2F%2Fkeybooks.ro%2F&amp;_wpnonce=51553dfe32" class="icon ">Logout</a></li>
+10:27:36.276 [main] INFO  utils.Log - calling method <click> on element <input type="submit" class="submit_button" value="Login">
+10:27:51.170 [main] INFO  utils.Log - calling method <click> on element <input type="submit" class="submit_button" value="Login">

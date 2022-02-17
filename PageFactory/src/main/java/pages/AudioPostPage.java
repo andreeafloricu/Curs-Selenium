@@ -14,6 +14,13 @@ public class AudioPostPage extends SeleniumWrappers {
 		PageFactory.initElements(driver, this);
 	}
 	
-	@FindBy(css = "span.mejs-time-handle") public WebElement timeSlider;
-	@FindBy(css = "div.mejs-horizontal-volume-handle") public WebElement volumeSlider;
+	@FindBy(css = "span[aria-valuenow='0']") public WebElement timeSliderMin;
+	@FindBy(css = "span[aria-valuenow='240.248156']") public WebElement timeSliderMax;
+	
+	@FindBy(css = "div[style='left: 0%;']") public WebElement volumeSliderMin;
+	@FindBy(css = "div[style='left: 100%;']") public WebElement volumeSliderMax;
+	
+	@FindBy(css = "div[class*='mejs-play']") public WebElement playButton;
+
+
 }

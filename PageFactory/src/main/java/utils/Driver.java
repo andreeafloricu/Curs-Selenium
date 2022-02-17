@@ -6,9 +6,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Driver {
 
 	public WebDriver driver;
-	public String browser = ReadPropertiesFile.config.getProperty("browser");
+	//public String browser = ReadPropertiesFile.config.getProperty("browser");
 	
-	public WebDriver initDriver () {
+	public WebDriver initDriver (String browser) {
 		switch (browser.toLowerCase()) {
 		
 		case "chrome":

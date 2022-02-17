@@ -1,0 +1,4 @@
+21:41:22.295 [main] INFO  utils.Log - calling method <click> on element <button type="submit" class="search_submit icon-search" data-content="search" title="Open search"></button>
+21:41:22.550 [main] INFO  utils.Log - calling method <click> on element <button type="submit" class="search_submit icon-search" data-content="search" title="Open search"></button>
+21:41:27.428 [main] INFO  utils.Log - calling method <click> on element <button type="submit" class="search_submit icon-search" data-content="search" title="Open search"></button>
+21:41:27.706 [main] INFO  utils.Log - calling method <click> on element <button type="submit" class="search_submit icon-search" data-content="search" title="Open search"></button>

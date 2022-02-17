@@ -9,7 +9,7 @@ import utils.SeleniumWrappers;
 
 public class NavMenuPage extends SeleniumWrappers {
 
-	public WebDriver driver;
+	//public WebDriver driver;
 	
 	public NavMenuPage(WebDriver driver) {
 		super(driver);
@@ -22,8 +22,17 @@ public class NavMenuPage extends SeleniumWrappers {
 	@FindBy(linkText = "Post Formats") public WebElement postFormatsLink;
 	@FindBy(linkText = "CONTACTS") public WebElement contactLink;
 	@FindBy(linkText = "EVENTS") public WebElement eventsPage;
+	
+	@FindBy(css="button[class*='search_submit']") public WebElement searchIcon;
+	@FindBy(css="input[class='search_field']") public WebElement searchInput;
 
 	public void navigateTo(WebElement element) {
 		element.click();
+	}
+	
+	public void searchBooks(String book) {
+		click(searchIcon);
+		sendKeys(searchInput, book);
+		click(searchIcon);
 	}
 }

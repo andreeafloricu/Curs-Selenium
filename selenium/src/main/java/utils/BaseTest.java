@@ -11,6 +11,7 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import com.google.common.io.Files;
+
 import pages.NavMenuPage;
 
 public class BaseTest {
@@ -19,7 +20,7 @@ public class BaseTest {
 	public WebDriver driver;
 	public NavMenuPage navMenu;
 	
-//	@Parameters({"url"})
+	//@Parameters({"url"})
 	@BeforeClass
 	public void setUp() {		
 		System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
@@ -62,5 +63,9 @@ public class BaseTest {
 	
 	public void navigateToShop () {
 		driver.get("https://keybooks.ro/shop/");
+	}	
+	
+	public void navigateToSingleAutor() {
+		driver.get("https://keybooks.ro/team/margaret-robins/");
 	}
 }

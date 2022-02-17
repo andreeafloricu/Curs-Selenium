@@ -14,6 +14,7 @@ public class NavMenuPage  {
 	public By loginLink = By.linkText("Login");
 	public By shopLink = By.linkText("BOOKS");
 	public By contactLink = By.linkText("CONTACTS");
+	public By singleAuthorLink = By.linkText("SINGLE AUTHOR");
 	
 	public void navigateToLogin() {
 		//WebWait
@@ -34,5 +35,15 @@ public class NavMenuPage  {
 	public ContactPage navToContact() {
 		driver.findElement(contactLink);
 		return new ContactPage(driver);
+	}
+	
+	public SingleAutorPage navToSingleAuthor() {
+		driver.findElement(singleAuthorLink).click();
+		return new SingleAutorPage(driver);
+	}
+	
+	public ShippingAddress navToShippingAddress() {
+		driver.get("https://keybooks.ro/account/edit-address/shipping/");
+		return new ShippingAddress(driver);
 	}
 }

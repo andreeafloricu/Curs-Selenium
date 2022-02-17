@@ -1,65 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-01-20T09:43:00 EET" name="Default suite" finished-at="2022-01-20T09:43:09 EET" duration-ms="8940">
+  <suite started-at="2022-02-09T21:12:20 EET" name="Default suite" finished-at="2022-02-09T21:12:44 EET" duration-ms="24198">
     <groups>
     </groups>
-    <test started-at="2022-01-20T09:43:00 EET" name="Default test" finished-at="2022-01-20T09:43:09 EET" duration-ms="8940">
-      <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.LoginTest@76908cc0]" started-at="2022-01-20T09:43:00 EET" name="setUp" finished-at="2022-01-20T09:43:04 EET" duration-ms="4173" status="PASS">
+    <test started-at="2022-02-09T21:12:20 EET" name="Default test" finished-at="2022-02-09T21:12:44 EET" duration-ms="24198">
+      <class name="tests.Homework8">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:20 EET" name="setUp" finished-at="2022-02-09T21:12:25 EET" duration-ms="5006" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginTest(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@76908cc0]" started-at="2022-01-20T09:43:04 EET" name="loginTest" finished-at="2022-01-20T09:43:04 EET" duration-ms="0" status="FAIL">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'user' is required by @Test on method loginTest but has not been marked @Optional or defined
-in C:\Users\afloricu\AppData\Local\Temp\testng-eclipse--1513131137\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'user' is required by @Test on method loginTest but has not been marked @Optional or defined
-in C:\Users\afloricu\AppData\Local\Temp\testng-eclipse--1513131137\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:270)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:358)
-at org.testng.internal.Parameters.createParameters(Parameters.java:700)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:884)
-at org.testng.internal.Parameters.handleParameters(Parameters.java:740)
-at org.testng.internal.ParameterHandler.handleParameters(ParameterHandler.java:59)
-at org.testng.internal.ParameterHandler.createParameters(ParameterHandler.java:38)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:791)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method signature="login()[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:25 EET" name="login" finished-at="2022-02-09T21:12:30 EET" duration-ms="5300" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@76908cc0]" started-at="2022-01-20T09:43:04 EET" name="tearDown" finished-at="2022-01-20T09:43:09 EET" duration-ms="4734" status="PASS">
+        </test-method> <!-- login -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:30 EET" name="recordFailure" finished-at="2022-02-09T21:12:30 EET" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=login status=SUCCESS method=Homework8.login()[pri:0, instance:tests.Homework8@76908cc0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method signature="filterByIndex()[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:30 EET" name="filterByIndex" finished-at="2022-02-09T21:12:35 EET" depends-on-methods="tests.Homework8.login" duration-ms="5182" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterByIndex -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:35 EET" name="recordFailure" finished-at="2022-02-09T21:12:35 EET" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filterByIndex status=SUCCESS method=Homework8.filterByIndex()[pri:0, instance:tests.Homework8@76908cc0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method signature="filterByValue()[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:35 EET" name="filterByValue" finished-at="2022-02-09T21:12:39 EET" depends-on-methods="tests.Homework8.login" duration-ms="3967" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- filterByValue -->
+        <test-method is-config="true" signature="recordFailure(org.testng.ITestResult)[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:39 EET" name="recordFailure" finished-at="2022-02-09T21:12:39 EET" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=filterByValue status=SUCCESS method=Homework8.filterByValue()[pri:0, instance:tests.Homework8@76908cc0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- recordFailure -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.Homework8@76908cc0]" started-at="2022-02-09T21:12:39 EET" name="tearDown" finished-at="2022-02-09T21:12:44 EET" duration-ms="4705" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.Homework8 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

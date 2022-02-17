@@ -18,6 +18,11 @@ public class LoginPage extends SeleniumWrappers {
 	@FindBy(id = "password") public WebElement passwordFiled;
 	@FindBy(css = "input[class='submit_button']") public WebElement submitButton;
 	@FindBy(css = "li[class='menu_user_logout']") public WebElement logoutButton;
+	
+	@FindBy(css = "a[class*='popup_login_link']") public WebElement loginLink;
+	@FindBy(css = "div[class*='sc_infobox_style_succes") public WebElement popupSucces;	
+	@FindBy(css = "div[class*='sc_infobox_style_error") public WebElement popupFailed;
+	@FindBy(css= ".popup_close") public WebElement closeLoginButton;
 
 	public LoginPage(WebDriver driver) {
 		super(driver);
@@ -29,6 +34,12 @@ public class LoginPage extends SeleniumWrappers {
 		sendKeys(usernameField, username); //varianta selenium wrappers
 		sendKeys(passwordFiled, password);
 		//submitButton.click();
+		click(submitButton);
+	}
+	
+	public void loginInApp(String username, String password) {
+		sendKeys(usernameField, username);
+		sendKeys(passwordFiled, password);
 		click(submitButton);
 	}
 	
